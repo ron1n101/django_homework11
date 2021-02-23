@@ -23,10 +23,10 @@ from tag.views import tag
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('editor/',editor),
-    path('post/', post),
-    path('tag/', tag),
-    path('app/editor/', include('editor.urls')),
-    path('app/post/', include('post.urls')),
-    path('app/tag/', include('tag.urls')),
+    path('editor/', include('editor.urls')),
+    path('post/', include('post.urls')),
+    path('tag/', include('editor.urls')),
+    path('app/editor/', editor),
+    path('app/post/', post),
+    path('app/tag/', tag),
 ]
